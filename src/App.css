@@ -1,38 +1,313 @@
+/*
+Author: Matheus Atonelli de Oliveira  
+The entire website css will be in App.css 
+*/
+
 .App {
   text-align: center;
+  font-family: sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* --------> Navbar <-------------------*/
+.navbar {
+  background: #fff;
+  height: 80px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+
+.navbar-container {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
 }
 
-.App-link {
-  color: #61dafb;
+.navbar-logo {
+  color: #32cd32;
+  justify-self: start;
+  margin-left: 20px;
+  cursor: pointer;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
 }
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #32cd32;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem, 1rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+/*For the Fa ICONS remember to put your font awesome package link on your index.html*/
+.fa-bars {
+  color: #fff;
+}
+
+.menu-icon {
+  display: none;
+}
+
+/* --------> END Navbar <-------------------*/
+
+/* --------> Button <-------------------*/
+.btn {
+  padding: 8px 20px;
+  border-radius: 2px;
+  outline: none;
+  border:none;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #fff;
+  color: #32cd32;
+  border: 1px solid #fff;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #fff;
+  padding: 8px 20px;
+  border: 1px solid #fff;
+  transition: all 0.4s ease-out;
+}
+
+.btn-medium {
+  padding: 8px 20px;
+  font-size: 18px;
+}
+
+.btn-large {
+  padding: 12px 26px;
+  font-size: 20px; 
+}
+
+.btn-large:hover, .btn-medium:hover {
+  transition: all 0.4s ease-out;
+  background: #fff;
+  color: #32cd32;
+  transition: 250ms;
+}
+/* --------> END Button <-------------------*/
+
+/* --------> Main SeCtion <-------------------*/
+  .main-background {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #2323;
+    object-fit: contain;
+    font-family: sans-serif;
+  }
+  .main-background >h1 {
+    color: #32CD32;
+    font-size: 70px;
+  }
+  
+  .main-background >p {
+    font-size: 25px;
+    color: black;
+  }
+
+
+ .main-section {
+  background: url('/src/Components/img/sugar-cane-cutted.jpg') center center/cover no-repeat;
+   height: 100vh;
+   width: 100%;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   box-shadow: #2323;
+   object-fit: contain;
+ }
+
+ .main-section > h1 {
+  color: #98FB98;
+  font-size: 32px;
+}
+
+.main-section > p {
+  margin-top: 8px;
+  color: #fff;
+  font-size: 26px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.main-btn{
+  margin-top: 32px;
+}
+
+.main-btn .btn {
+  margin: 6px;
+}
+/* -------->END  Main SeCtion <-------------------*/
+
+/* -------->Card SeCtion <-------------------*/
+.card-section {
+ width: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+}
+
+.img-card{
+  padding-left: 80px;
+}
+
+/* -------->END  Card SeCtion <-------------------*/
+.chart-section {
+  width: 70%;
+  height: 60vh;
+  display: flex;
+  padding: 50px;
+}
+/* --------> Responsivines <-------------------*/
+@media screen and (max-width: 960px) {
+    .main-section >h1 {
+      font-size: 70px;
+      margin-top: -150px;
+    }
+    .main-section >p {
+      font-size: 30px;
+  }
+
+  .btn-mobile {
+      display: block;
+      text-decoration: none;
+  }
+  .btn {width: 100%;}
+    .NavbarItems {
+      position: relative;
+    }
+    .nav-menu {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      height: 90vh;
+      position: absolute;
+      top: 80px;
+      left: -100%;
+      opacity: 1;
+      transition: all 0.5s ease;
+    }
+    .nav-menu.active {
+      background: #2323;
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+    }
+
+      .nav-links {
+        text-align: center;
+        padding: 2rem;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: black;
+        color: #32CD32;
+        border-radius: 0;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%,50%);
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform:translate(-100%, 60%);
+        font-size: 1.8rem;
+        cursor: pointer;
+    }
+
+    .fa-times {
+        color: #fff;
+        font-size: 2rem;
+    }
+
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        text-decoration: none;
+        font-size: 1.5rem;
+        background-color: transparent;
+        color: #fff;
+        padding: 14px 20px;
+        border: 1px solid #fff;
+        transition: all 0.3s ease-out;
+    }
+
+    .nav-links-mobile:hover {
+        background: #fff;
+        color: #242424;
+        transition: 250ms;
+    }
+}
+
+@media screen and (max-width:768px) {
+  
+      .main-section >h1 {
+          font-size: 50px;
+          margin-top: -100px;
+      }
+  
+      .main-section >p {
+          font-size: 30px;
+      }
+  
+      .btn-mobile {
+          display: block;
+          text-decoration: none;
+      }
+      .btn {width: 100%;}
+  }
+    
+/* --------> Responsivines <-------------------*/
