@@ -1,23 +1,23 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
 
-const data = {
+const dataInsolation = {
   labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'],
   datasets: [
     {
-      label: 'mm',
-      data: [345,
-        268.3,
-        252.4,
-        115,
-        28.9,
-        10.6,
-        4.6,
-        11.8,
-        45.8,
-        147.4,
-        238,
-        341],
+      label: '%',
+      data: [149.4,
+        169.7,
+        173.6,
+        216.2,
+        248.2,
+        250.4,
+        262.6,
+        262.8,
+        199.6,
+        198.8,
+        163.6,
+        144.4],
       backgroundColor: [
         'rgba(255, 99, 132, 0.2)',
         'rgba(54, 162, 235, 0.2)',
@@ -39,6 +39,7 @@ const data = {
   ],
 };
 
+
 const options = {
   scales: {
     yAxes: [
@@ -54,11 +55,15 @@ const options = {
 const VertChart = () => (
   <>
   <div className='chart-section'>
-  <div className='header'>
-      <h1 className='title'>Precipitação acumulada</h1>
+    <div className='chart'>
+      <div className='chart-title'>
+        <h1 className='title'>Insolação 1981-2010</h1>
+      </div>
+        <Bar data={dataInsolation} options={options} />
     </div>
-    <Bar data={data} options={options} />
   </div>
+  
+
 
   </>
 );

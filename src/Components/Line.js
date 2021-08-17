@@ -76,13 +76,16 @@ const options = {
 const LineChart = () => (
   <>
   <div className='chart-section'>
-  <div className='header'>
-      <h1 className='title'>Grafico Temperatura 1981-2010</h1>
-      <div className='links'>
-      </div>
+  <div className='chart'>
+    <div className='header'>
+      <h1 className='title'>Gráfico Temperatura 1981-2010</h1>
+
+    
     </div>
     <Line data={temp} options={options} />
   </div>
+    </div>
+
     
   </>
 );
