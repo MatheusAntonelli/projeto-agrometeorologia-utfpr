@@ -161,6 +161,7 @@ The entire website css will be in App.css
  .main-section > h1 {
   color: #98FB98;
   font-size: 32px;
+  background-color: rgb(0, 0, 0, 0.3);
 }
 
 .main-section > p {

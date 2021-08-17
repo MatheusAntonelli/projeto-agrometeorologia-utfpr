@@ -18,10 +18,11 @@ function MainPage() {
         <section id='graphs'>
            <Line></Line>
            <AtmPression></AtmPression>
+           <Evaporation></Evaporation>
            <UmidadeRelativa></UmidadeRelativa>
            <RainHistory></RainHistory>
            <VertChart></VertChart>
-           <Evaporation></Evaporation>
+           
 
         </section>
         <section id=''>

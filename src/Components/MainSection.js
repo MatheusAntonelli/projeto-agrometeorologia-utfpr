@@ -14,8 +14,10 @@ function MainSection() {
             <div className="main-btn">
                 <AnchorLink href='#graphs'>
                 <Button className="btn"
-                buttonSize='btn-large'>
-                    Continuar
+                buttonSize='btn-large'
+                buttonStyle='btn-outline'
+                >
+                    Inciar Apresentação
                 </Button>
                 </AnchorLink>
 

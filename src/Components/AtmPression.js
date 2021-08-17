@@ -19,8 +19,8 @@ const dataPres = {
         1010.5,
         1010.8],
       fill: false,
-      backgroundColor: 'rgb(	0,0,255)',
-      borderColor: 'rgba(	0,0,255, 0.2)',
+      backgroundColor: 'rgb(41, 128, 185)',
+      borderColor: 'rgba(41, 128, 185, 0.4)',
     },
   ],
 };

@@ -20,7 +20,7 @@ const data = {
             86.6],
         fill: false,
         backgroundColor: 'rgb(255, 99, 132)',
-        borderColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgba(214, 60, 7, 0.5)',
       },
     ],
   };
