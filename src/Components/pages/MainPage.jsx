@@ -5,6 +5,7 @@ import VertChart from '../VertChart';
 import AtmPression from '../AtmPression';
 import UmidadeRelativa from '../UmidadeRelativa';
 import RainHistory from '../RainHistory';
+import Evaporation from '../Evaporation';
 function MainPage() {
     return (
         <>
@@ -16,10 +17,11 @@ function MainPage() {
         </section>
         <section id='graphs'>
            <Line></Line>
+           <AtmPression></AtmPression>
            <UmidadeRelativa></UmidadeRelativa>
            <RainHistory></RainHistory>
            <VertChart></VertChart>
-           <AtmPression></AtmPression>
+           <Evaporation></Evaporation>
 
         </section>
         <section id=''>

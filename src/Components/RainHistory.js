@@ -53,11 +53,10 @@ const options = {
 
 const RainHistory= () => (
       <>
-
 <div className='chart-section'>
       <div className="chart">
       <div className='header'>
-      <h1 className='title'>Pressão Atmosferica 1981 - 2010</h1>
+      <h1 className='title'>Preciptação Acumulada 1981 - 2010</h1>
       <div className='links'>
       </div>
     </div>
